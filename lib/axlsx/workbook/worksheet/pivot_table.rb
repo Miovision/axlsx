@@ -263,14 +263,14 @@ module Axlsx
     def pivot_field_for(cell_ref, subtotal=true)
       if rows.include? cell_ref
         if subtotal
-          '<pivotField axis="axisRow" compact="0" outline="0" subtotalTop="0" showAll="0" includeNewItemsInFilter="1">' + '<items count="1"><item t="default"/></items>' + '</pivotField>'
+          '<pivotField axis="axisRow" compact="0" outline="0" sortType="ascending" subtotalTop="0" showAll="0" includeNewItemsInFilter="1">' + '<items count="1"><item t="default"/></items>' + '</pivotField>'
         else
-          '<pivotField axis="axisRow" compact="0" outline="0" subtotalTop="0" showAll="0" includeNewItemsInFilter="1" defaultSubtotal="0">' + '</pivotField>'
+          '<pivotField axis="axisRow" compact="0" outline="0" sortType="ascending" subtotalTop="0" showAll="0" includeNewItemsInFilter="1" defaultSubtotal="0">' + '</pivotField>'
         end
       elsif columns.include? cell_ref
-        '<pivotField axis="axisCol" compact="0" outline="0" subtotalTop="0" showAll="0" includeNewItemsInFilter="1">' + '<items count="1"><item t="default"/></items>' + '</pivotField>'
+        '<pivotField axis="axisCol" compact="0" outline="0" sortType="ascending" subtotalTop="0" showAll="0" includeNewItemsInFilter="1">' + '<items count="1"><item t="default"/></items>' + '</pivotField>'
       elsif pages.include? cell_ref
-        '<pivotField axis="axisPage" compact="0" outline="0" subtotalTop="0" showAll="0" includeNewItemsInFilter="1">' + '<items count="1"><item t="default"/></items>' + '</pivotField>'
+        '<pivotField axis="axisPage" compact="0" outline="0" sortType="ascending" subtotalTop="0" showAll="0" includeNewItemsInFilter="1">' + '<items count="1"><item t="default"/></items>' + '</pivotField>'
       elsif data_refs.include? cell_ref
         '<pivotField dataField="1" compact="0" outline="0" subtotalTop="0" showAll="0" includeNewItemsInFilter="1">' + '</pivotField>'
       else
