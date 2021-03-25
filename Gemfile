@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+
+gem 'mimemagic', github: 'mimemagicrb/mimemagic', branch: :master, ref: 'cfb06c8bc700b7c45e069455becb7f3cb03b0b52'
 gemspec
 
 group :test do
